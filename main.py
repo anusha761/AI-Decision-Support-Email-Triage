@@ -35,6 +35,7 @@ def load_llm(api_key):
 with open("openai_key.txt", "r") as f:
     api_key = f.read().strip()
 
+
 # Initialize cached models
 embedding_model = load_embedding_model()
 vector_db = load_vector_db(embedding_model)
