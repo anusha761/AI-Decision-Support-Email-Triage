@@ -23,8 +23,8 @@ This system empowers organizations to save time, reduce risk, and ensure consist
 
 - **Zero-shot Explainability:** No training data needed, ensuring adaptability and full transparency in decision-making.
 - **Multi-Dimensional Classification:** Department and priority classifiers built on robust transformer models.
-- **Business Rule Augmentation:** Overrides AI with domain-specific rules to avoid blind reliance and maintain control.
-- **RAG-based SOP Integration:** Contextual memory retrieval to suggest precise actions aligned with company policies.
+- **AI with Business Rule Governance**: Model predictions are enhanced with confidence-based thresholds and business logic to ensure oversight, accountability, and explainable overrides — combining the strengths of AI with domain expertise.
+- **SOP-Based Action Recommendation**: Integrates Retrieval-Augmented Generation (RAG) to suggest next steps based on departmental SOPs - fully grounded in company policies.
 - **Visual Analytics:** Priority distribution graphs with confidence score tooltips for informed triage.
 - **Scalable and Modular:** Designed with open-source frameworks to support easy integration and future enhancements.
 
