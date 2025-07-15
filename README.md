@@ -1,1 +1,1 @@
-# AI-Based Email Triaging Decision Support System
+# AI-Based Email Triage Decision Support System
