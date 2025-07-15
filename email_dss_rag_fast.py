@@ -10,13 +10,13 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 
-# === CACHED RESOURCES ===
+
 @st.cache_resource
 def load_embedding_model():
     return HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 @st.cache_resource
-def load_vector_db(_embedding_model):  # <- Leading underscore fixes unhashable param issue
+def load_vector_db(_embedding_model):  
     return Chroma(
         persist_directory="chroma_sop",
         embedding_function=_embedding_model,
@@ -31,15 +31,19 @@ def load_classifier():
 def load_llm(api_key):
     return ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=api_key, temperature=0.2)
 
-# === Initialize cached models ===
+# Read openai key
+with open("openai_key.txt", "r") as f:
+    api_key = f.read().strip()
+
+# Initialize cached models
 embedding_model = load_embedding_model()
 vector_db = load_vector_db(embedding_model)
 classifier = load_classifier()
-openai_key = "xxx"  # Replace with actual key
+openai_key = "xxx" 
 client = OpenAI(api_key=openai_key)
 llm = load_llm(openai_key)
 
-# === Priority Classification ===
+# Priority Classification
 def classify_priority(text):
     labels = [
         "This email is urgent and requires immediate action to prevent penalties or major risks.",
@@ -77,7 +81,7 @@ def explain_priority(model_label, confidence_score, final_label):
             explanation += " Moderate confidence, use with caution."
     return explanation
 
-# === Department Classifier ===
+# Department Classifier
 def classify_department(text):
     labels = [
         "This email is about finance, tax, invoicing, or budgeting.",
@@ -90,7 +94,7 @@ def classify_department(text):
     result = classifier(text, labels)
     return label_map[result['labels'][0]]
 
-# === GPT Summary ===
+# GPT Summary Generator
 def generate_summary(text):
     prompt = f"Summarize the following email in one sentence:\n\n{text}"
     response = client.chat.completions.create(
@@ -99,7 +103,7 @@ def generate_summary(text):
     )
     return response.choices[0].message.content.strip()
 
-# === RAG Chain ===
+# RAG Chain Suggestive Action Generator
 def get_suggestive_action(summary, department):
     retriever = vector_db.as_retriever(search_kwargs={"k": 2, "filter": {"department": department}})
     
@@ -129,7 +133,7 @@ def get_suggestive_action(summary, department):
 
     return qa_chain.run(summary)
 
-# === Process Emails ===
+# Process Emails
 def process_emails(df):
     summaries, departments, priorities, prio_confidences, explanations, suggestions = [], [], [], [], [], []
 
@@ -165,7 +169,7 @@ def process_emails(df):
     df = df.drop(columns=["Priority Rank"])
     return df
 
-# === Streamlit App ===
+# Streamlit App
 def main():
     st.set_page_config(page_title="AI Email Triaging DSS", layout="wide")
     st.title("AI-Based Email Triaging Decision Support System")
