@@ -1,8 +1,8 @@
 # AI-Powered Email Triage Decision Support System
 
-An advanced **AI-driven Decision Support System (DSS)** designed to revolutionize enterprise email management by automating triage with zero-shot explainability, priority classification, department-specific sorting, and actionable next steps based on company SOPs.
+> An advanced **AI-driven Decision Support System (DSS)** designed to revolutionize enterprise email management by automating triage with zero-shot explainability, priority classification, department-specific sorting, and actionable next steps based on company SOPs.
 
----
+
 
 ## Project Overview
 
@@ -17,7 +17,7 @@ By leveraging **zero-shot AI models** (facebook/bart-large-mnli), **business rul
 
 This system empowers organizations to save time, reduce risk, and ensure consistent compliance, setting a new standard for AI-assisted communication management.
 
----
+
 
 ## Key Features
 
@@ -28,7 +28,7 @@ This system empowers organizations to save time, reduce risk, and ensure consist
 - **Visual Analytics:** Priority distribution graphs with confidence score tooltips for informed triage.
 - **Scalable and Modular:** Designed with open-source frameworks to support easy integration and future enhancements.
 
----
+
 
 ## Tech Stack
 
@@ -42,7 +42,7 @@ This system empowers organizations to save time, reduce risk, and ensure consist
 | Frontend UI           | Streamlit                          |
 | Programming Language  | Python                            |
 
----
+
 
 ## Problem Statement
 
@@ -50,7 +50,7 @@ This system empowers organizations to save time, reduce risk, and ensure consist
 - Critical emails are often hidden in neutral or complex language, delaying responses.
 - Manual triaging is time-consuming, error-prone, and risky for business continuity.
 
----
+
 
 ## Solution Overview
 
@@ -61,7 +61,7 @@ This system empowers organizations to save time, reduce risk, and ensure consist
 5. **Action Suggestion:** RAG retrieves SOP context and generates precise next steps for high-priority cases.
 6. **Visualization & Filtering:** Streamlit UI provides dynamic filtering, priority charts, and detailed email views with explanations.
 
----
+
 
 ## Enterprise Impact
 
@@ -70,7 +70,7 @@ This system empowers organizations to save time, reduce risk, and ensure consist
 - Reduces cognitive load and operational overhead on teams.
 - Provides a transparent, explainable AI workflow aligned with enterprise governance.
 
----
+
 
 ## Getting Started
 
@@ -82,7 +82,7 @@ streamlit run main.py
 Upload your email dataset as a CSV containing these columns: Timestamp, Sender, Subject, Body
 Experience seamless, intelligent triage with actionable insights instantly.
 
----
+
 
 ## Streamlit UI Screenshots
 
@@ -99,7 +99,7 @@ This PDF showcases:
 - Suggested actions for high-priority emails with transparent AI-business rule insights
 
 
----
+
 
 # Contact
 Anusha Chaudhuri [anusha761]
