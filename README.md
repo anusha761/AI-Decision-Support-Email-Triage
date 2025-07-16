@@ -100,6 +100,17 @@ This PDF showcases:
 
 
 
+## Output Screenshots
+
+
+<img width="1510" height="698" alt="image" src="https://github.com/user-attachments/assets/2d99881a-408d-4d95-8868-8ae815b9a39a" />
+
+
+<img width="1514" height="743" alt="image" src="https://github.com/user-attachments/assets/daf5f166-d3dd-4963-a762-b749da0b382f" />
+
+
+
+
 
 # Contact
 Anusha Chaudhuri [anusha761]
