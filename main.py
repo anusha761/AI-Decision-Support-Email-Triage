@@ -40,7 +40,7 @@ with open("openai_key.txt", "r") as f:
 embedding_model = load_embedding_model()
 vector_db = load_vector_db(embedding_model)
 classifier = load_classifier()
- client = OpenAI(api_key=openai_key)
+client = OpenAI(api_key=openai_key)
 llm = load_llm(openai_key)
 
 # Priority Classification
