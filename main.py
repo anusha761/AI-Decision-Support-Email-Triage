@@ -33,15 +33,14 @@ def load_llm(api_key):
 
 # Read openai key
 with open("openai_key.txt", "r") as f:
-    api_key = f.read().strip()
+    openai_key = f.read().strip()
 
 
 # Initialize cached models
 embedding_model = load_embedding_model()
 vector_db = load_vector_db(embedding_model)
 classifier = load_classifier()
-openai_key = "xxx" 
-client = OpenAI(api_key=openai_key)
+ client = OpenAI(api_key=openai_key)
 llm = load_llm(openai_key)
 
 # Priority Classification
