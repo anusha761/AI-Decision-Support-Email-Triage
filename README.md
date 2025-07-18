@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This flagship project implements a hybrid Decision Support System combining **Model-driven**, **Data-driven**, and **Knowledge-driven** approaches to address the critical challenge of managing high-volume corporate email inflow. Business users are overwhelmed with hundreds of daily emails, where crucial communications are often buried in neutral or ambiguous language, causing delays and operational risks.
+This flagship project implements a hybrid Decision Support System combining **Model-driven** and **Knowledge-driven** approaches to address the critical challenge of managing high-volume corporate email inflow. Business users are overwhelmed with hundreds of daily emails, where crucial communications are often buried in neutral or ambiguous language, causing delays and operational risks.
 
 By leveraging **zero-shot AI models** (facebook/bart-large-mnli), **business rule integration**, and **context-aware retrieval augmented generation (RAG)** with LangChain and ChromaDB, this system delivers:
 
