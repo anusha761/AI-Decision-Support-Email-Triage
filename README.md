@@ -6,14 +6,15 @@
 
 ## Project Overview
 
-This flagship project implements a hybrid Decision Support System combining **Model-driven** and **Knowledge-driven** approaches to address the critical challenge of managing high-volume corporate email inflow. Business users are overwhelmed with hundreds of daily emails, where crucial communications are often buried in neutral or ambiguous language, causing delays and operational risks.
+This project implements a hybrid Decision Support System combining **Model-driven** and **Knowledge-driven** approaches to address the critical challenge of managing high-volume corporate email inflow. Business users are overwhelmed with hundreds of daily emails, where crucial communications are often buried in neutral or ambiguous language, causing delays and operational risks.
 
 By leveraging **zero-shot AI models** (facebook/bart-large-mnli), **business rule integration**, and **context-aware retrieval augmented generation (RAG)** with LangChain and ChromaDB, this system delivers:
 
-- **Explainable Department Classification:** Intelligently categorizes emails into Finance/Tax and IT with descriptive labeling for precise routing.
-- **Hybrid Priority Scoring:** Combines AI confidence scores with business logic for High, Medium, and Low priority tagging, maintaining transparency via confidence tooltips and rule-based overrides.
-- **Actionable Recommendations:** Uses LangChain RAG and SOP context embeddings to generate concise, reliable next-step actions on high-priority emails.
-- **Interactive Enterprise UI:** Streamlit interface enabling department filtering, priority visualization, and rich email summaries — empowering decision makers with data-driven insights at a glance.
+- **Explainable Department Classification:** Classifies emails into Finance/Tax and IT with descriptive labeling using NLI BART model for precise routing.
+- **Hybrid Priority Scoring:** Assigns High, Medium, or Low priority to emails using a hybrid approach — combining NLI BART model confidence scores with customizable business rules. Tooltips provide visibility into AI confidence and manual overrides.
+- **Actionable Recommendations:** For high-priority emails, generates concise, reliable next-step actions using LangChain RAG and embedded Standard Operating Procedures (SOPs), enabling immediate response and resolution.
+- **Comprehensive Summary:** Leverages OpenAI LLMs to produce precise summaries of each email, aiding quick understanding and decision-making.
+- **Interactive Enterprise UI:** Built with Streamlit, the interface allows users to filter by department, visualize priorities, and explore summaries — equipping decision-makers with data-driven insights at a glance.
 
 This system empowers organizations to save time, reduce risk, and ensure consistent compliance, setting a new standard for AI-assisted communication management.
 
@@ -42,7 +43,7 @@ This system empowers organizations to save time, reduce risk, and ensure consist
 | Frontend UI           | Streamlit                          |
 | Programming Language  | Python                            |
 
-
+Note: This project is also implemented using LangGraph to demonstrate structured, stateful workflow orchestration.
 
 ## Problem Statement
 
@@ -88,7 +89,7 @@ Experience seamless, intelligent triage with actionable insights instantly.
 
 To explore the interactive email triaging dashboard in detail and see the system in action, please refer to the PDF below showcasing the Streamlit interface:
 
-📄 [View Streamlit UI Screenshots](./outputs.pdf)
+[View Streamlit UI Screenshots](./outputs.pdf)
 
 This PDF showcases:
 
@@ -122,6 +123,13 @@ This PDF showcases:
 
 ### Screenshot 7
 <img width="1528" height="740" alt="image" src="https://github.com/user-attachments/assets/30ed5f82-14b5-4368-b103-9f1a20a26124" />
+
+See screenshots of the LangGraph-based implementation here: 
+
+[View Streamlit UI Screenshots For LangGraph Implementation](./outputs_langgraph.pdf)
+
+
+# Libraries
 
 
 
