@@ -130,8 +130,12 @@ See screenshots of the LangGraph-based implementation here:
 
 
 # Libraries
-
-
+lamgchain - 0.3.27
+transformers - 4.53.3
+chromadb - 1.0.15
+openai - 1.97.1
+streamlit - 1.47.1
+langgraph - 0.6.0
 
 # Contact
 Anusha Chaudhuri [anusha761]
