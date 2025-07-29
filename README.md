@@ -136,6 +136,7 @@ See screenshots of the LangGraph-based implementation here:
 - openai - 1.97.1
 - streamlit - 1.47.1
 - langgraph - 0.6.0
+- pandas - 2.2.2
 
 # Contact
 Anusha Chaudhuri [anusha761]
