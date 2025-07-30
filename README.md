@@ -56,10 +56,10 @@ Note: This project is also implemented using LangGraph to demonstrate structured
 ## Solution Overview
 
 1. **Email ingestion:** User uploads CSV with emails.
-2. **Department Classification:** Zero-shot model predicts Finance/Tax or IT category.
-3. **Priority Scoring:** Hybrid AI and business-rule logic assign priority with explainable confidence.
-4. **Summarization:** GPT-3.5 Turbo generates concise email summaries.
-5. **Action Suggestion:** RAG retrieves SOP context and generates precise next steps for high-priority cases.
+2. **Department Classification:** Zero-shot NLI BART model predicts Finance/Tax or IT category.
+3. **Summarization:** GPT-3.5 Turbo generates concise email summaries.
+4. **Priority Scoring:** Hybrid AI (NLI BART model) and business-rule logic assign priority with explainable confidence.
+5. **Action Suggestion:** RAG retrieves SOP context and generates precise next steps only for high-priority cases.
 6. **Visualization & Filtering:** Streamlit UI provides dynamic filtering, priority charts, and detailed email views with explanations.
 
 
